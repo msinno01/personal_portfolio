@@ -1,0 +1,37 @@
+body {
+  opacity: 1;
+  transition: 0.7s opacity;
+}
+
+body.fade {
+    opacity: 0;
+    transition: none;
+}
+
+body.center{
+  text-align: center;
+}
+
+.rounded {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  border-collapse: collapse;
+}
+
+.rounded img{
+  width: 100%;
+  height: auto;
+}
+
+.rounded-main {
+  border-radius: 30%;
+}
+
+
+h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

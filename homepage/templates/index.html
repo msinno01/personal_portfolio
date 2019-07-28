@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block page_content %}
+<div class="container">
+  <center>
+    <h1>Hi, I'm Matthew Sinnott.</h1>
+  </center>
+  <div class="row justify-content-md-center">
+  <div class="col-sm-8">
+      <img class="rounded-main" src="{% static 'img/profile_pic.png' %}" width="80%"/>
+  </div>
+  <div class="col-sm-4">
+    <div class="jumbotron">
+      <h2>About Me</h2>
+      <p>I am a 3rd year PhD student at the Institute of Structural and Molecular Biology.
+        I work in the laboratories of Prof. Maya Topf and Prof. Konstantinos Thalassinos on
+        Computational Approaches to the Analysis of Chemical Crosslinking Mass Spectrometry
+        Data. Aside from this I am a rugby fan, I enjoy tag rugby and kayaking and I am a
+        keen viewer of politics. I am interested in programming and science policy.</p>
+      <button onclick="location.href = '{% url 'cv' %}';" class="btn btn-primary">See CV</button>
+      <br>
+      <br>
+      <h2>What's on this site?</h2>
+      <p>On this site you can find details about my CV and a deeper dive into projects
+      I've undertaken. I have also included a blog which I will be updating every so often,
+      I will be posing mainly about interesting areas of policy with a bent towards science policy.
+      Although I am a member of the Liberal Democrats, these posts will not be political in themselves.
+      Finally there is a contact page should you wish to get in touch.</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+{% endblock %}
