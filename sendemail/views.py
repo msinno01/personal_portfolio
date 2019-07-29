@@ -9,16 +9,17 @@ def emailView(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+            name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
+            email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
                 with mail.get_connection() as connection:
-                    mail.EmailMessage("Message from Contact Page: %s" % subject, "From: %s\nMessage: %s" % (from_email, message), from_email, ['msinnott123@gmail.com'],connection=connection).send()
+                    mail.EmailMessage("Message from Contact Page: %s" % subject, "From: %s, %s\nMessage: %s" % (name, email, message), email, ['msinnott123@gmail.com'],connection=connection,headers={'Reply-To':email}).send()
             except mail.BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
     return render(request, "email.html", {'form': form})
 
 def successView(request):
-    return HttpResponse('Success! Thank you for your message.')
+    return render(request, "success.html", {})

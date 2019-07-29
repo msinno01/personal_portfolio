@@ -11,6 +11,8 @@
         </a>&nbsp;
         {% endfor %}
     </small>
+    <br>
+    <img src="{{ post.cover.url }}" alt="{{ post.title }}" height='500px'/>
     <p>{{ post.body | linebreaks }}</p>
     <h3>Leave a comment:</h3>
     <form action="/blog/{{ post.pk }}/" method="post">

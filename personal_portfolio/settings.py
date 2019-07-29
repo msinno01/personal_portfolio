@@ -140,3 +140,6 @@ EMAIL_HOST_USER = 'msinnott123@gmail.com'
 EMAIL_HOST_PASSWORD = 'MsICkS45'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
