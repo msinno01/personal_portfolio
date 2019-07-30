@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2">
+    <br>
+    <a href="{% url 'blog_index' %}"
+    class="btn btn-primary">
+        Return to Blog Index
+    </a>
+    <br>
     <h1>{{ category | title }}</h1>
     <hr>
     {% for post in posts %}
-        <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+        <h2><img src="{{post.cover.url}}" alt="" width="100px"> <a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
         <small>
             {{ post.created_on.date }} |&nbsp;
             Categories:&nbsp;
@@ -15,6 +21,7 @@
             {% endfor %}
         </small>
         <p>{{ post.body | slice:":400" }}...</p>
+    <hr>
     {% endfor %}
 </div>
 {% endblock %}

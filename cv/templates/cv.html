@@ -3,127 +3,175 @@
 {% block page_content %}
 <div class="container">
   <h1>Cirriculum Vitae <button class="btn btn-primary" type="submit" onclick="window.open('{% static 'files/CV.pdf' %}')">Download PDF</button></h1>
-</div>
-<div class="row">
-  <div class="col-lg-12">
-    <div class="jumbotron">
-      <h2>Education</h2>
-      <ul class="cv-list">
-        <li>
-          <img src="{% static "img/ismb.png" %}" width="200px"/>
-          <h3>PhD in Structural Bioinformatics</h3>
-          <h4>October 2016 - Present</h4>
-          <h5>Institute of Structural and Molecular Biology - Birkbeck College and UCL</h5>
-          <p>I am currently undertaking a PhD in Structural Bioinformatics with the Topf and Thalassinos
-            laboratories at the ISMB. I am working on approaches to integrate restraints derived from Mass
-            Spectrometry data into an approach to model the high de1nition structures proteins and protein
-            complexes. My project mainly involves data analysis and computational modelling of large Mass
-            Spectrometry data sets using Python.</p>
-        </li>
-        <li>
-          <img src="{% static "img/imperial.jpeg" %}" width="200px"/>
-          <h3>Bsc. Biochemistry with a Year in Industry</h3>
-          <h4>October 2012 - July 2016</h4>
-          <h4>Imperial College London</h4>
-          <p>I completed my undergraduate degree at Imperial College London which included a sandwich
-            year in industry between my second and third years, for which I attained a 2.1 grade. In my final
-            year I took modules related to Structural Biology, Systems Biology and Bioinformatics. In my 1nal
-            year project I attempted to purify a protein involved in the gliding motility of the malaria parasite,
-            as well as performing some network, docking and phylogenetic analyses.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-lg-12">
-    <div class="jumbotron">
-      <h2>Work Experience</h2>
-      <ul class="cv-list">
-        <li>
-          <img src="{% static "img/rothamsted.png" %}" width="200px"/>
-          <h3>Researcher</h3>
-          <h4>July 2014 - July 2015</h4>
-          <h5>Rothamsted Research</h5>
-          <p>During my year in industry I worked in the Cell Walls Group in the Plant Biology and Crop Science
-            Division of Rothamstead Research. My main aims were to investigate the cell wall properties of
-            the wheat starchy endosperm in wild type and knockdowns of proteins in the Glycosyl Transferase
-            61 family. This was mainly done using RP-HPLC and biophysical assays.</p>
-        </li>
-        <li>
-          <img src="{% static "img/imperial_union.jpg" %}" width="200px"/>
-          <h3>Bar Staff/Supervisor</h3>
-          <h4>October 2012 - October 2016</h4>
-          <h4>Imperial College Union Bar</h4>
-          <p>Whilst completing my undergraduate degree I worked as Bar Staff at the college union. In 2015 I
-            received a promotion to Supervisor/Senior Steward.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="col-lg-12">
-      <div class="jumbotron">
-        <h2>Courses</h2>
-        <ul class="cv-list">
-          <li>
-            <h3><img src="{% static "img/first_aid.png" %}" width="40px"/> ITC Level 3 Outdoor and at Work First Aid Qualification</h3>
-          </li>
-          <li>
-              <h3><img src="{% static "img/politics.jpg" %}" width="40px"/> Wellcome Genome Campus Science Policy: Improving the Uptake of Research into UK Policy Course</h3>
-          </li>
-          <li>
-              <h3><img src="{% static "img/protein.jpg" %}" width="40px"/> EBI Computational Structural Biology Course</h3>
-          </li>
-        </ul>
+  <h2>Education</h2>
+
+  <div class="card-group">
+    <div class="card">
+      <img src="{% static "img/ismb.png" %}" class="card-img-top"/>
+      <div class="card-body">
+        <h3 class="card-title">PhD in Structural Bioinformatics</h3>
+        <h4 class="card-title">October 2016 - Present</h4>
+        <h5 class="card-title">Institute of Structural and Molecular Biology - Birkbeck College and UCL</h5>
+        <p class="card-text">I am currently undertaking a PhD in Structural Bioinformatics with the Topf and Thalassinos
+          laboratories at the ISMB. I am working on approaches to integrate restraints derived from Mass
+          Spectrometry data into an approach to model the high de1nition structures proteins and protein
+          complexes. My project mainly involves data analysis and computational modelling of large Mass
+          Spectrometry data sets using Python.</p>
       </div>
     </div>
-  <div class="col-lg-12">
-    <div class="jumbotron">
-      <h2>Skills</h2>
-      <ul class="cv-list">
-        <li>
-          <h3><img src="{% static "img/python.png" %}" width="40px"/> Python 2&3</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/linux.png" %}" width="40px"/> Programming in Linux/Unix Operating Systems</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/latex.png" %}" width="40px"/> Writing publications in LATEX</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/html.jpg" %}" width="40px"/> Web development in HTML, CSS, Javascript and Django</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/office.jpg" %}" width="40px"/> Software in the Office Suite such as Word, Powerpoint, Excel and Access</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/leadership.jpg" %}" width="40px"/> Leadership and Teamwork</h3>
-        </li>
-        <li>
-            <h3><img src="{% static "img/presentation.jpeg" %}" width="40px"/> Presenting and Public Speaking</h3>
-        </li>
-      </ul>
+
+    <div class="card">
+        <img src="{% static "img/imperial.jpeg" %}" class="card-img-top"/>
+        <div class="card-body">
+          <h3 class="card-title">Bsc. Biochemistry with a Year in Industry</h3>
+          <h4 class="card-title">October 2012 - July 2016</h4>
+          <h5 class="card-title">Imperial College London</h5>
+          <p class="card-text">I completed my undergraduate degree at Imperial College London which included a sandwich
+              year in industry between my second and third years, for which I attained a 2.1 grade. In my final
+              year I took modules related to Structural Biology, Systems Biology and Bioinformatics. In my 1nal
+              year project I attempted to purify a protein involved in the gliding motility of the malaria parasite,
+              as well as performing some network, docking and phylogenetic analyses.</p>
+        </div>
+      </div>
+    </div>
+
+  <br>
+  <h2>Work Experience</h2>
+  <div class="card-group">
+    <div class="card">
+      <img src="{% static "img/rothamsted.png" %}" class="card-img-top"/>
+      <div class="card-body">
+            <h3 class="card-title">Researcher</h3>
+            <h4 class="card-title">July 2014 - July 2015</h4>
+            <h5 class="card-title">Rothamsted Research</h5>
+            <p class="card-text">During my year in industry I worked in the Cell Walls Group in the Plant Biology and Crop Science
+              Division of Rothamstead Research. My main aims were to investigate the cell wall properties of
+              the wheat starchy endosperm in wild type and knockdowns of proteins in the Glycosyl Transferase
+              61 family. This was mainly done using RP-HPLC and biophysical assays.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static "img/imperial_union.jpg" %}"  class="card-img-top"/>
+      <div class="card-body">
+        <h3 class="card-title">Bar Staff/Supervisor</h3>
+        <h4 class="card-title">October 2012 - October 2016</h4>
+        <h4 class="card-title">Imperial College Union Bar</h4>
+        <p class="card-text">Whilst completing my undergraduate degree I worked as Bar Staff at the college union. In 2015 I
+          received a promotion to Supervisor/Senior Steward.</p>
+      </div>
     </div>
   </div>
-  <div class="col-lg-12">
-    <div class="jumbotron">
+  <br>
+  <h2>Courses</h2>
+  <div class="card-group">
+    <div class="card">
+      <img src="{% static "img/first_aid.png" %}" class="card-img-top"/>
+      <div class="card-body">
+        <h3 class="card-title">ITC Level 3 Outdoor and at Work First Aid Qualification</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{% static "img/politics.jpg" %}" class="card-img-top"/>
+      <div class="card-body">
+        <h3 class="card-title">Wellcome Genome Campus Science Policy: Improving the Uptake of Research into UK Policy Course</h3>
+      </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static "img/protein.jpg" %}" class="card-img-top"/>
+        <div class="card-body">
+          <h3 class="card-title">EBI Computational Structural Biology Course</h3>
+        </div>
+      </div>
+  </div>
+  <br>
+  <h2>Skills</h2>
+  <div class="card-group">
+      <div class="card">
+        <img src="{% static "img/python.png" %}" class="card-img-top"/>
+        <div class="card-body">
+          <h3 class="card-title">Python 2&3</h3>
+        </div>
+      </div>
+
+      <div class="card">
+          <img src="{% static "img/linux.png" %}" class="card-img-top"/>
+          <div class="card-body">
+            <h3 class="card-title">Programming in Linux/Unix Operating Systems</h3>
+          </div>
+      </div>
+
+        <div class="card">
+            <img src="{% static "img/latex.png" %}" class="card-img-top"/>
+            <div class="card-body">
+              <h3 class="card-title">Writing publications in LATEX</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static "img/html.jpg" %}" class="card-img-top"/>
+            <div class="card-body">
+              <h3 class="card-title">Web development in HTML, CSS, Javascript and Django</h3>
+            </div>
+        </div>
+
+  </div>
+  <div class="card-group">
+        <div class="card">
+            <img src="{% static "img/office.jpg" %}" class="card-img-top"/>
+            <div class="card-body">
+              <h3 class="card-title">Software in the Office Suite such as Word, Powerpoint, Excel and Access</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static "img/leadership.jpg" %}" class="card-img-top"/>
+            <div class="card-body">
+              <h3 class="card-title">Leadership and Teamwork</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static "img/presentation.jpeg" %}" class="card-img-top"/>
+            <div class="card-body">
+              <h3 class="card-title">Presenting and Public Speaking</h3>
+            </div>
+        </div>
+      </div>
+
+      <br>
       <h2>Hobbies and Interests</h2>
-      <ul class="cv-list">
-          <li>
-            <h3><img src="{% static "img/climbing.jpg" %}" width="40px"/> Rock Climbing</h3>
-          </li>
-          <li>
-              <h3><img src="{% static "img/kayak.jpg" %}" width="40px"/> White Water, Sea and touring Kayaking</h3>
-          </li>
-          <li>
-              <h3><img src="{% static "img/rugby.jpg" %}" width="40px"/> I enjoy rugby and play Tag Rugby</h3>
-          </li>
-          <li>
-              <h3><img src="{% static "img/politics.jpg" %}" width="40px"/> Interested in Current Affairs and Politics</h3>
-          </li>
-        </ul>
-    </div>
-  </div>
-</div>
+      <div class="card-group">
+          <div class="card">
+              <img src="{% static "img/climbing.jpg" %}" class="card-img-top"/>
+              <div class="card-body">
+                <h3 class="card-title">Rock Climbing</h3>
+              </div>
+          </div>
 
+          <div class="card">
+              <img src="{% static "img/kayak.jpg" %}" class="card-img-top"/>
+              <div class="card-body">
+                <h3 class="card-title">White Water, Sea and touring Kayaking</h3>
+              </div>
+          </div>
 
+          <div class="card">
+              <img src="{% static "img/rugby.jpg" %}" class="card-img-top"/>
+              <div class="card-body">
+                <h3 class="card-title">I enjoy rugby and play Tag Rugby</h3>
+              </div>
+          </div>
+
+          <div class="card">
+              <img src="{% static "img/politics.jpg" %}" class="card-img-top"/>
+              <div class="card-body">
+                <h3 class="card-title">Interested in Current Affairs and Politics</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+<br>
 
 {% endblock %}

@@ -39,3 +39,15 @@ h1 {
 .cv-list{
   list-style-type: none;
 }
+
+.card-img-top {
+  width: 80%;
+  height: 15vw;
+  object-fit: scale-down;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body{
+  hyphens: auto;
+}
